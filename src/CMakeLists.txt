@@ -1,0 +1,16 @@
+add_executable(
+	main_app 
+	main.cpp
+	Command.cpp
+	FcCommand.cpp
+	OutCommand.cpp
+	RdtCommand.cpp
+	RfcCommand.cpp
+	FileStreamsProvider.cpp 
+	Logger.cpp 
+	DateLogger.cpp 
+	FunctionalLogger.cpp 
+	OutLogger.cpp
+	Processor.cpp
+	Loader.cpp
+	)

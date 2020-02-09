@@ -1,0 +1,1 @@
+add_executable(test_app test.cpp ../src/FileStreamsProvider.cpp ../src/Logger.cpp ../src/DateLogger.cpp ../src/FunctionalLogger.cpp ../src/OutLogger.cpp)
