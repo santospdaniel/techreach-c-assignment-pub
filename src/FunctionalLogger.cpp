@@ -9,9 +9,9 @@ namespace cassign
 		, m_lineCount(1)
 	{}
 
-	void FunctionalLogger::writeLog(const std::string& info, const std::string& cppMethod, const bool withLineCount)
+	void FunctionalLogger::writeLog(const std::string& info, const std::string& cppMethod)
 	{
-		Logger::writeLog(getPrefix(cppMethod, withLineCount) + " " + info);
+		Logger::writeLog(getPrefix(cppMethod, true) + " " + info);
 	}
 
 	void FunctionalLogger::fetchLogDataInto(std::ostream& outStream) const

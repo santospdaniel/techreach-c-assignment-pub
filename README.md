@@ -1,2 +1,2 @@
-# techreach-c-assignment-pub
+# techreach-c-assignment-priv
 C Assignment exercise

@@ -15,7 +15,7 @@ namespace cassign
 		Logger::writeLog(info);
 	}
 
-	void OutLogger::writeLog(const std::string& info, const std::string& cppMethod, const bool withLineCount)
+	void OutLogger::writeLog(const std::string& info, const std::string& cppMethod)
 	{
 		OutLogger::writeLog(OutLogger::getPrefix(cppMethod) + " " + info);
 	}

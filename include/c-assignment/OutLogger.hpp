@@ -17,7 +17,7 @@ namespace cassign
         //Inherited from Logger. Disambiguates super class methods.
         void writeLog(const std::string& info) override;
         //Is not inherited from Logger. Writes log information with compile information as prefix.
-        void writeLog(const std::string& info, const std::string& cppMethod, const bool withLineCount);
+        void writeLog(const std::string& info, const std::string& cppMethod);
         /*Inherited from Logger. Disambiguates super class methods.*/
         void fetchLogDataInto(std::ostream& outStream) const override;
 
@@ -29,5 +29,5 @@ namespace cassign
 
 //This macro adds compile information to the log.
 #ifndef writeLogFunc
-#define writeLogFunc(info) writeLog((info),__FUNCTION__, true)
+#define writeLogFunc(info) writeLog((info),__FUNCTION__)
 #endif // !writeLogFunc

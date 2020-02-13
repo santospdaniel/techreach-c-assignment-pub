@@ -15,7 +15,7 @@ namespace cassign
         Is not inherited from Logger. Adds the cppMethod and the withLineCount arguments to form the log line perfix.
         Intentionally hides the Logger::writeLog, but consumes it internally.
         */
-        void writeLog(const std::string& info, const std::string& cppMethod, const bool withLineCount);
+        void writeLog(const std::string& info, const std::string& cppMethod);
         //Inherited from Logger. Fetches the even line numbers from the log into the outstream argument.
         void fetchLogDataInto(std::ostream& outStream) const override;
 
@@ -51,6 +51,6 @@ namespace cassign
 
 //This macro adds compile information to the log.
 #ifndef writeLogFunc
-#define writeLogFunc(info) writeLog((info),__FUNCTION__, true)
+#define writeLogFunc(info) writeLog((info),__FUNCTION__)
 #endif // !writeLogFunc
 

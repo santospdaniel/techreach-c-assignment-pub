@@ -49,6 +49,10 @@ namespace cassign
 		PROCESSOR_READY_TO_PROCESS
 	};
 
+	/*
+	The Processor implements the processor requirement.
+	The processor will invoke the Command's process method inside a detached thread so it can be processed in parallel while the user attempts to input other commands from the command prompt.
+	*/
 	class Processor : public LoadersProcessor, public CommandResources
 	{
 	public:
@@ -87,7 +91,7 @@ namespace cassign
 		cassign::ProcessorAvailability m_processorAvailability;
 		std::function<void(ProcResult)> m_processedCallback;
 		std::default_random_engine m_dre;
-		std::mutex m_threadMutex;
+
 		/*
 		List that holds allowed commands to get processed. 
 		Only allowed commands are processed, so do not forget to initialize them!
