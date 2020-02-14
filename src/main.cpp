@@ -38,10 +38,16 @@ int main()
 	processor.setProcessedCallback(std::bind(&Loader::processCallback, loader, std::placeholders::_1));
 
 	setupIntSignal();
-
-	while (true)
+	try
 	{
-		loader.promptUser(&std::cin);
+		while (true)
+		{
+			loader.promptUser(&std::cin);
+		}
+	} 
+	catch (std::exception e)
+	{
+		std::cout << "Caught exception: " << e.what() << "\n";
 	}
-	return 0; 
+	return 1; 
 }
